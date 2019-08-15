@@ -14,6 +14,14 @@ const ProfileSchema = new Schema({
         type: String,
         required: true,
     },
+    likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Profile',
+    }],
+    dislikes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Profile',
+    }],
 }, {
     timestamps: true,
 });
